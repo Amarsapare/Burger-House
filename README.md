@@ -1,73 +1,131 @@
-# Burger House Project
+# 🍔 Burger House – Full Stack Restaurant Web App
 
-## Overview
-Burger House is a web application for a burger restaurant that allows customers to view the menu, make table reservations, and place food orders online. The backend is built with Flask and uses SQLite for data storage. The frontend is a responsive website with interactive UI elements.
+## 🔍 Overview
+**Burger House** is a full-stack restaurant website that allows customers to:
+- View burgers and special offers
+- Reserve tables with a form
+- Place food orders with modal-based interaction
 
-## Features
-- View burger menu and special offers
-- Book a table reservation with date, time, and number of people
-- Place food orders with customer details and selected burger
-- Responsive design with animations and modal order form
-- REST API endpoints for reservations and orders
+The backend is built with **Flask + SQLite**, and the frontend is responsive with HTML, CSS, and JavaScript.
 
-## Technologies Used
-- Python 3
-- Flask
-- Flask-SQLAlchemy
-- SQLite
-- HTML5, CSS3, JavaScript
-- ScrollReveal.js for animations
-- Remix Icon for icons
+---
 
-## Setup Instructions
+## ⚙️ Technologies Used
+- **Frontend:** HTML5, CSS3, JavaScript, ScrollReveal.js, Remix Icon
+- **Backend:** Python 3, Flask, Flask-SQLAlchemy
+- **Database:** SQLite
 
-1. Clone the repository or download the project files.
+---
 
-2. Navigate to the backend directory:
-   ```
-   cd Burger_House/backend
-   ```
+## 🧰 Folder Structure
+```
+Burger_House/
+├── backend/
+│   ├── app.py
+│   ├── raw_db.py
+│   ├── read_db.py
+│   ├── requirements.txt
+│   ├── instance/
+│   │   └── reservations.db
+│   ├── static/
+│   │   ├── main.js
+│   │   ├── style.css
+│   │   └── assets/ (images)
+│   └── templates/
+│       └── index.html
+├── screenshots/
+│   ├── homepage.png
+│   ├── order_form.png
+│   └── reservation_form.png
+└── README.md
+```
 
-3. (Optional) Create and activate a virtual environment:
-   ```
-   python -m venv venv
-   venv\Scripts\activate   # Windows
-   source venv/bin/activate  # macOS/Linux
-   ```
+---
 
-4. Install required Python packages:
-   ```
-   pip install -r requirements.txt
-   ```
+## 🚀 Getting Started
 
-5. Run the Flask application:
-   ```
-   python app.py
-   ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/Burger_House.git
+cd Burger_House/backend
+```
 
-6. Open your browser and go to:
-   ```
-   http://127.0.0.1:5000/
-   ```
+### 2. (Optional) Create a Virtual Environment
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
 
-## Usage
-- Use the navigation menu to explore different sections.
-- Use the reservation form to book a table.
-- Click "ORDER NOW" on any burger to open the order form modal.
-- Fill in your details and submit the order.
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
 
-## Notes
-- The database file `reservations.db` is created automatically on first run.
-- API endpoints:
-  - POST `/api/reservation` - Create a new reservation
-  - GET `/api/reservations` - Get all reservations
-  - POST `/api/order` - Place a new order
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-## Future Improvements
-- Add user authentication
-- Add order history and management
-- Improve UI/UX with better feedback and validation
-- Deploy to a production server with HTTPS and security features
+### 4. Run the Flask App
+```bash
+python app.py
+```
 
-## License
-This project is open source and free to use.
+### 5. Open in Browser
+Visit:
+```
+http://127.0.0.1:5000/
+```
+
+---
+
+## ✨ Features
+- 🍔 Interactive burger menu
+- 📅 Table reservation form
+- 🛒 Modal-based food order system
+- 🎨 Clean, responsive design with animations
+- 🔗 Backend APIs for order/reservation
+
+---
+
+## 🔌 API Endpoints (For Testing)
+| Method | Endpoint              | Description              |
+|--------|-----------------------|--------------------------|
+| POST   | `/api/reservation`    | Create a new reservation |
+| GET    | `/api/reservations`   | View all reservations    |
+| POST   | `/api/order`          | Place a new food order   |
+
+📝 Note: The SQLite database file (`reservations.db`) is auto-created in `/instance/` on first run.
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Homepage
+![Homepage](screenshots/homepage.png)
+
+### 🧾 Order Modal
+![Order Form](screenshots/order_form.png)
+
+### 📅 Reservation Form
+![Reservation Form](screenshots/reservation_form.png)
+
+---
+
+## 💡 Future Improvements
+- Add user login & admin access
+- Send confirmation emails on orders/reservations
+- Deploy backend using PythonAnywhere or Render
+- Improve form validation & success messages
+
+---
+
+## 👤 Author
+**Amar Sapare**  
+📧 amarsaparemec9591@gmail.com  
+🔗 [LinkedIn](https://linkedin.com/in/amar-sapare)
+
+---
+
+## 🪪 License
+This project is open source and free to use under the MIT License.
